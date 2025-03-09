@@ -1,3 +1,4 @@
+```
 /src
 ├── app/ # Next.js routes (app router)
 │ ├── (auth)/ # Auth-related pages (if using segment groups)
@@ -14,8 +15,9 @@
 ├── styles/ # Global styles
 ├── public/ # Static assets (images, icons)
 ├── middleware.ts # Middleware (authentication, logging)
-
-✔ Use @/lib for all non-UI logic → Keeps UI and logic separate.
-✔ Use @/components only for UI → No API calls or business logic inside components.
-✔ Use @/app only for routing → Pages, layouts, and route handlers go here.
-✔ Use middleware for global logic → Authentication, logging, redirects.
+```
+## ✅ Best Practices for Next.js Project Structure
+- ✔ **Use `@/lib` for all non-UI logic** → Keeps UI and logic separate.  
+- ✔ **Use `@/components` only for UI** → No API calls or business logic inside components.  
+- ✔ **Use `@/app` only for routing** → Pages, layouts, and route handlers go here.  
+- ✔ **Use middleware for global logic** → Authentication, logging, redirects.  
