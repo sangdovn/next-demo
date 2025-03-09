@@ -1,6 +1,6 @@
 "use server";
 
-export async function createPost(prevState: any, formData: FormData) {
+export async function createPost(_prevState: unknown, formData: FormData) {
   const title = formData.get("title");
   const content = formData.get("content");
 
