@@ -62,6 +62,5 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/${{ vars.APP_NAME }}:latest
             docker stop ${{ vars.APP_NAME }} || true
             docker rm ${{ vars.APP_NAME }} || true
-            docker rmi $(docker images -f "dangling=true" -q) || true
-            docker system prune -af
+            docker rmi "${{ secrets.DOCKER_HUB_USERNAME }}/${{ vars.APP_NAME }}:latest" || true
             docker run -d --restart unless-stopped --name ${{ vars.APP_NAME }} -p 3001:3000 ${{ secrets.DOCKER_USERNAME }}/${{ vars.APP_NAME }}:latest
